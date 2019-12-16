@@ -1,0 +1,70 @@
+@import '../cssUtils.scss';
+
+a{
+    text-decoration: none;
+}
+
+#navbar{
+    background-color: $accent1;
+    padding: .7em 1em;
+    color: $text;
+    .navigation{
+        display: flex;
+        justify-content: space-between;
+        &-title{
+            &-txt{
+                font-size: 2em;
+            }
+        }
+        &-toggler-icon{
+            background-color: $text;
+            border: none;
+            outline: none;
+            border-radius: 20%;
+            img{
+                height: 3em;
+                width: 3em;
+            }
+        }
+    }
+    .sites{
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        display: block;
+        overflow: hidden;
+        &-site-txt{
+            font-size: 1.3em;
+            text-align: center;
+        }
+    }
+}
+
+@media only screen and (min-width: 1050px) {
+    #navbar{
+        .navigation{
+            &-toggler-icon{
+                display: none;
+            }
+        }
+        .sites{
+            position: absolute;
+            display: flex;
+            align-items: center;
+            height: 3em;
+            padding: -1px 13px;
+            left: 50%;
+            top: 0;
+            transform: translateX(-50%);
+            background-color: $accent4;
+            box-shadow: 0px 2px 2px 2px $accent5;
+            &-site{
+                margin: 0 1em;
+                &-txt{
+                    color: $text;
+                    font-size: 1em;
+                    margin: 0 2em;
+                }
+            }
+        }
+    }
+}

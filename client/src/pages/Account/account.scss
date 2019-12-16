@@ -1,0 +1,159 @@
+@import '../../components/cssUtils.scss';
+
+*{
+    margin:0;
+    padding: 0;
+}
+
+body{
+    font-family:'Open Sans', sans-serif;
+    background-color: $accent1;
+    color: $accent4;
+}
+
+#account{
+    .header{
+        &-txt{
+            font-size: 2.8em;
+            text-align: center;
+            color: $text;
+        }
+    }
+    .form{
+        margin: 1em 8%;
+        color: $text;
+        font-weight: bolder;
+        &-field{
+            display: flex;
+            flex-direction: column;
+            margin-bottom: .5rem;
+            &-label{
+                font-size: 1.3em;
+                margin-bottom: .5rem;
+            }
+            &-text{
+                outline: none;
+                border: $accent4 2px solid;
+                background-color: rgb(177, 177, 177);
+                color: $text;
+                font-size: 1.2em;
+                color: black;
+                padding: .3em;
+                &:active{
+                    border-color: $text;
+                }
+            }
+            &-bttns{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                &-bttn{
+                    background-color: $accent4;
+                    color: $text;
+                    border: none;
+                    font-weight: bold;
+                    font-size: 1em;
+                    height: 3em;
+                    width: 9em;
+                    margin-top: .5rem;
+                }
+            }
+        }
+    }
+}
+
+.select{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 44.3vh;
+    &-bttn{
+        outline: none;
+        color: $text;
+        font-size: 5em;
+        background-color: $accent3;
+        height: 100%;
+        width: 100%;
+        border: 4px $accent4 solid;
+    }
+}
+
+@media only screen and (min-width: 750px) {
+    #account{
+        .header{
+            &-txt{
+                font-size: 4em;
+            }
+            margin-bottom: 3em;
+        }
+        .form{
+            margin: 2em 15%;
+        }
+    }
+}
+
+@media only screen and (min-width: 750px) {
+    #account{
+        .header{
+            &-txt{
+                font-size: 4em;
+            }
+            margin-bottom: 3em;
+        }
+        .form{
+            margin: auto 25%;
+        }
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    .select{
+        flex-direction: row;
+        &-bttn{
+            width: 50%;
+            height: 90vh;
+            &:nth-child(odd){
+                background-image:url(https://images.unsplash.com/photo-1575961895629-6fda7948c27a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60);
+                background-repeat: no-repeat;
+                // background-attachment: fixed;
+                // background-position: center center;
+                background-size: cover;
+            }
+            &:nth-child(even){
+                background-image: url(https://images.unsplash.com/photo-1575923877462-a865f26c967a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60);
+                background-repeat: no-repeat;
+                background-attachment: local;
+                // background-position: center center;
+                background-size: cover;
+            }
+            &-txt{
+                margin: auto 20%;
+                font-weight: bolder;
+                background-color: rgba(53, 0, 211, .8);
+                padding: .1em;
+                border-radius: 2%;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1700px) {
+    .select{
+        margin: 0 auto;
+        width: 108em;
+        &-bttn{
+            &:nth-child(odd){
+                background-size: 101% 112%;
+                background-position: 50% 28%;
+            }
+            &:nth-child(even){
+                background-size: 101% 112%;
+                background-position: 50% 28%;
+            }
+            &-txt{
+                padding:1.1em;
+            }
+        }
+    }
+}
