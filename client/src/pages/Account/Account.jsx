@@ -4,9 +4,6 @@ import SignUp from './SignUp'
 import Login from './Login'
 import './account.scss'
 
-
-
-
 const Account = () =>{
     const [ type, setType ] = useState("")
 

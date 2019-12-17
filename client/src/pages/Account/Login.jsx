@@ -1,5 +1,6 @@
 import React from 'react'
 import axios from 'axios'
+import {} from '../../actions'
 import './account.scss'
 import UseForm from '../../components/useForm'
 import validate from '../../components/validate'
@@ -10,7 +11,7 @@ const Login = props =>{
     const include = []
 
     const submit = () => {
-        console.table(values)
+        console.table(values  )
         axios.post('/users/login', values)
             .then(res => console.log(res.data))
             .catch(() => console.log("something went wrong"))

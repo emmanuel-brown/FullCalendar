@@ -28,7 +28,7 @@ client = mongoose.connect(process.env.ATLAS_URI, { useNewUrlParser: true, useUni
         console.log(err) 
         return
     }   
-    console.log("Connected successfully to server") 
+    console.log("Connected successfully to database") 
 });
 
 /////////////////////////

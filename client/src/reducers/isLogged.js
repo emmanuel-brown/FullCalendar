@@ -1,5 +1,5 @@
 
-const loggedRouter = (state = false, action) =>{
+const loggedReducer = (state = false, action) =>{
     switch(action.type){
         case 'SIGN_IN':
             return !state
@@ -7,5 +7,3 @@ const loggedRouter = (state = false, action) =>{
             return state
     }
 }
-
-export default loggedRouter

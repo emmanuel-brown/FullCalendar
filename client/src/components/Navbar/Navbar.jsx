@@ -1,15 +1,20 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import './navbar.scss'
+import { useSelector } from 'react-redux'
 
 const Navbar = () =>{
+    const counter = useSelector(state => state.counter)
+    console.log(Object.keys(useSelector).length)
+    console.log(counter)
     const [ menu, setMenu ] = useState(false)
 
     let open
-    if(window.innerWidth < 674){ 
+    if(window.innerWidth < 1000){ 
         open = menu ? { height: "3.4em" } : { height: "0" }
         open.transition = "ease all 1s"
     }
+    console.log("innerWidth: ", window.innerWidth)
 
     return(
         <nav id="navbar">

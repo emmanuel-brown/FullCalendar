@@ -23,6 +23,16 @@ Router.post('/login', async (req, res) =>{
     }
 })
 
+Router.post('/logoutAll', auth, async (req, res) =>{
+    try{
+        req.user.tokens = []
+        await req.user.save()
+        res.send()
+    } catch (e) {
+        res.status(500).send()
+    }
+})
+
 Router.patch('/update/:id', async (req, res) =>{
     const upadates = Object.keys(req.body)
     const allowedUpadates = [ 'name', 'email', 'password' ]
